@@ -1,0 +1,17 @@
+<%= form_with(model: examinee, local: true) do |form| %>
+  <% if examinee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(examinee.errors.count, "error") %> prohibited this examinee from being saved:</h2>
+
+      <ul>
+      <% examinee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
