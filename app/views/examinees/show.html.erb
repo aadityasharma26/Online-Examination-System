@@ -1,4 +1,23 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  Name: <%= @examinee.name %>
+</p>
+<p>
+  Number: <%= @examinee.number %>
+</p>
+<p>
+  Email: <%= @examinee.email %>
+</p>
+<p>
+  Password: <%= @examinee.password %>
+</p>
+<p>
+  Confirm_Password: <%= @examinee.password %>
+</p>
+<p>
+  Address: <%= @examinee.address %>
+</p>
+
 <%= link_to 'Edit', edit_examinee_path(@examinee) %> |
 <%= link_to 'Back', examinees_path %>

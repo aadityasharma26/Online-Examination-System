@@ -5,13 +5,25 @@
 <table>
   <thead>
     <tr>
-      <th colspan="3"></th>
+      <th>Name</th>
+      <th>Number</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Confirm_Password</th>
+      <th>Address</th>
     </tr>
   </thead>
 
   <tbody>
     <% @examinees.each do |examinee| %>
+
       <tr>
+        <td><%= examinee.name %></td>
+        <td><%= examinee.number %></td>
+        <td><%= examinee.email %></td>
+        <td><%= examinee.password %></td>
+        <td><%= examinee.password %></td>
+        <td><%= examinee.address %></td>
         <td><%= link_to 'Show', examinee %></td>
         <td><%= link_to 'Edit', edit_examinee_path(examinee) %></td>
         <td><%= link_to 'Destroy', examinee, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -10,6 +10,7 @@ class ExamineesController < ApplicationController
   # GET /examinees/1
   # GET /examinees/1.json
   def show
+    @examinee = Examinee.find(params[:id])
   end
 
   # GET /examinees/new
@@ -19,6 +20,7 @@ class ExamineesController < ApplicationController
 
   # GET /examinees/1/edit
   def edit
+    @examinee = Examinee.find(params[:id])
   end
 
   # POST /examinees
