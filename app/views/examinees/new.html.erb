@@ -1,5 +1,40 @@
 <h1>New Examinee</h1>
 
+<% if @examinee.errors.any? %>
+<h1>The follofing errors prevented the examinee form getting created</h1>
+<ul>
+  <% @examinee.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul>
+<% end %>
+<%= form_for @examinee do |f| %>
+<p>
+  <%= f.label :Name %>
+  <%= f.text_field :name %>
+</p>
+<p>
+  <%= f.label :Mobile %>
+  <%= f.telephone_field :number %>
+</p>
+<p>
+  <%= f.label :Email %>
+  <%= f.email_field :email %>
+</p>
+<p>
+  <%= f.label :Password %>
+  <%= f.password_field :password %>
+</p>
+<p>
+  <%= f.label :Confirm_Password %>
+  <%= f.password_field :password %>
+</p>
+<p>
+  <%= f.label :Address %>
+  <%= f.text_area  :address %>
+</p>
+<% end %>
+
 <%= render 'form', examinee: @examinee %>
 
 <%= link_to 'Back', examinees_path %>
