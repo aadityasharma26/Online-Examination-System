@@ -45,7 +45,6 @@ footer{
 
 footer a:hover{
   color: #222;
-  background-color: #0080FF;
 }
 
 footer small{
@@ -62,4 +61,20 @@ footer ul li{
   float: left;
   margin-left: 15px;
   color: #0080FF;
+}
+
+div ul{
+  float: center;
+  list-style: none;
+}
+
+div ul li{
+  text-align: center;
+  float: center;
+  margin-left: 15px;
+  color: #0080FF;
+}
+
+table thead tr th{
+  margin: 20px;
 }
