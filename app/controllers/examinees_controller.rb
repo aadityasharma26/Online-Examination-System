@@ -18,7 +18,7 @@ class ExamineesController < ApplicationController
 
 
   def edit
-    
+
   end
 
 
@@ -57,6 +57,11 @@ class ExamineesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def set_examinee
+  @examinee = Examinee.find(params[:id])
+  end
+
 
   private
 
