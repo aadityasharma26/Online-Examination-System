@@ -1,30 +1,27 @@
 class ExamineesController < ApplicationController
   before_action :set_examinee, only: [:show, :edit, :update, :destroy]
 
-  # GET /examinees
-  # GET /examinees.json
+
   def index
     @examinees = Examinee.all
   end
 
-  # GET /examinees/1
-  # GET /examinees/1.json
+
   def show
-    @examinee = Examinee.find(params[:id])
+
   end
 
-  # GET /examinees/new
+
   def new
     @examinee = Examinee.new
   end
 
-  # GET /examinees/1/edit
+
   def edit
-    @examinee = Examinee.find(params[:id])
+    
   end
 
-  # POST /examinees
-  # POST /examinees.json
+
   def create
     @examinee = Examinee.new(examinee_params)
 
@@ -39,8 +36,7 @@ class ExamineesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /examinees/1
-  # PATCH/PUT /examinees/1.json
+
   def update
     respond_to do |format|
       if @examinee.update(examinee_params)
@@ -53,8 +49,7 @@ class ExamineesController < ApplicationController
     end
   end
 
-  # DELETE /examinees/1
-  # DELETE /examinees/1.json
+
   def destroy
     @examinee.destroy
     respond_to do |format|
@@ -64,12 +59,12 @@ class ExamineesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_examinee
       @examinee = Examinee.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+
     def examinee_params
       params.fetch(:examinee, {})
     end
