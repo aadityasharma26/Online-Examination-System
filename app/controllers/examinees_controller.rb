@@ -23,7 +23,7 @@ class ExamineesController < ApplicationController
 
 
   def create
-    @examinee = Examinee.new(examinee_params)
+    @examinee = Examinee.new
 
     respond_to do |format|
       if @examinee.save
