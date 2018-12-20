@@ -23,8 +23,8 @@ class ExamineesController < ApplicationController
 
 
   def create
-    @examinee = Examinee.new
-
+    @examinee = Examinee.new(examinee_params)
+    @examinee.user = User.first
     respond_to do |format|
       if @examinee.save
         format.html { redirect_to @examinee, notice: 'Examinee was successfully created.' }
