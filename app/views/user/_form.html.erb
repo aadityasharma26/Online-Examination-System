@@ -1,5 +1,4 @@
-<%= form_with(model: user, local: true) do |form| %>
-  <% if @user.errors.any? %>
+<% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
@@ -9,9 +8,42 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <li>
+            <label for="inputName4">User Name</label>
+            <input type="text" class="form-control" id="inputName4" placeholder="Name">
+          </li><br>
+          <li>
+            <label for="inputNumber4">Number</label>
+            <input type="number" class="form-control" id="inputNumber4" placeholder="+91">
+          </li><br>
+          <li>
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+          </li><br>
+          <li>
+            <label for="inputPassword4">Password</label>
+            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+          </li>
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            Check me out
+          </label>
+        </div>
+      </div>
+    </form>
 
   <div class="col-sm-offset-2 col-sm-10">
     <%= form.submit "Sign Up", class: 'btn btn-primary btn-lg' %>
+
   </div>
+
 <% end %>
