@@ -1,7 +1,7 @@
 class ExamineesController < ApplicationController
   before_action :set_examinee, only: [:show, :edit, :update, :destroy]
-
-
+  before_action :require_same_user, only: [:edit, :update, :destroy]
+  before_action :require_admin, only: [:destroy]
   def index
     @examinees = Examinee.all
   end
@@ -9,6 +9,13 @@ class ExamineesController < ApplicationController
 
   def show
 
+  end
+
+  def destroy
+    @examinee = Examinee.find(params[:id])
+    @user.destroycles created by user
+    flash[:danger] = "Examinee and all examinee created by admin have been deleted"
+    redirect_to examinees_path
   end
 
 
@@ -72,5 +79,20 @@ class ExamineesController < ApplicationController
 
     def examinee_params
       params.fetch(:examinee, {})
+    end
+
+    def require_same_user
+      if current_user != @user and !current_user.admin?
+        flash[:danger] = "You can only edit your own account"
+        redirect_to root_path
+      end
+    end
+
+    def require_admin
+      if logged_in? and !current_user.admin?
+        flash[:danger] = "only admin  examinee can perform that action "
+        redirect_to root_path
+      end
+
     end
 end
