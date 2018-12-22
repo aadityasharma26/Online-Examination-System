@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :logins
   resources :admins
   resources :examinees
+  
   get 'examineesignin', to: 'logins#examineesignin'
   root 'home#index'
   get 'signin', to: 'home#signin'
