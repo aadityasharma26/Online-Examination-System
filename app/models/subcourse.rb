@@ -1,0 +1,2 @@
+class Subcourse < ApplicationRecord
+end

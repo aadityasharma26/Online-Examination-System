@@ -5,4 +5,8 @@ class HomeController < ApplicationController
   def about
 
   end
+
+  def examinee_home
+
+  end
 end

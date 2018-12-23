@@ -13,25 +13,20 @@
   </head>
   <body>
     <div class="center jumbotron" >
-      <h1>Admin</h1>
-      <h1>Work Space</h1>
+    <h1>Welcome</h1>
+    <h1>Online Examination System</h1>
       <div class="btn btn-info">
-        <%= link_to 'Examinee', examinees_path, class: "btn btn-primary btn-lg active" %>
-      </div>
-
-      <div class="btn btn-info">
-        <a href="https://www.youtube.com" class="btn btn-primary btn-lg active"
-            role="button" aria-pressed="true">Question</a>
-      </div>
-      <div class="btn btn-info">
-        <%= link_to 'Courses', courses_path, class: "btn btn-primary btn-lg active" %>
-      </div>
-      <div class="btn btn-info">
-        <%= link_to 'Subcourse', subcourses_path, class: "btn btn-primary btn-lg active" %>
+        <li class="dropdown">
+          <a href="#",align="center" class="btn btn-primary btn-lg active">Select Course</a>
+          <div class="dropdown_list">
+            <a href="https://www.youtube.com", class="btn btn-light" >B.Tech</a>
+            <a href="https://www.youtube.com", class="btn btn-light" >M.Tech</a>
+            <a href="https://www.youtube.com", class="btn btn-light" >MBA</a>
+            <a href="https://www.youtube.com", class="btn btn-light" >Others</a>
+          </div>
+        </li>
       </div>
     </div>
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

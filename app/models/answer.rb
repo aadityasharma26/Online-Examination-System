@@ -1,0 +1,8 @@
+class Answer < ActiveRecord::Base
+  belongs_to :question
+  has_many :examinee_answer
+
+  def correct
+    correct
+  end
+end

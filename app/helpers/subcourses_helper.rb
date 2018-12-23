@@ -1,0 +1,2 @@
+module SubcoursesHelper
+end

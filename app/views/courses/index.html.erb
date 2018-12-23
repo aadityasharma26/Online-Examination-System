@@ -6,15 +6,17 @@
   <thead>
     <tr>
       <th colspan="3"></th>
+      <th>Course Name</th>
     </tr>
   </thead>
 
   <tbody>
     <% @courses.each do |course| %>
       <tr>
-        <td><%= link_to 'Show', course %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
-        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= course.course %></td>
+        <td><%= link_to 'Show', course, class: "btn btn-light" %></td>
+        <td><%= link_to 'Edit', edit_course_path(course), class: "btn btn-light" %></td>
+        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-light" %></td>
       </tr>
     <% end %>
   </tbody>
