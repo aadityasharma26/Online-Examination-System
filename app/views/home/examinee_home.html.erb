@@ -13,16 +13,16 @@
   </head>
   <body>
     <div class="center jumbotron" >
-    <h1>Welcome</h1>
-    <h1>Online Examination System</h1>
+    <h1>Examinee</h1>
+    <h1>Work Space</h1>
       <div class="btn btn-info">
         <li class="dropdown">
           <a href="#",align="center" class="btn btn-primary btn-lg active">Select Course</a>
           <div class="dropdown_list">
-            <a href="https://www.youtube.com", class="btn btn-light" >B.Tech</a>
-            <a href="https://www.youtube.com", class="btn btn-light" >M.Tech</a>
-            <a href="https://www.youtube.com", class="btn btn-light" >MBA</a>
-            <a href="https://www.youtube.com", class="btn btn-light" >Others</a>
+            <%= link_to 'B.Tech', sbucourse_page_path, class: "btn btn-light" %>
+            <%= link_to 'M.Tech', sbucourse_page2_path, class: "btn btn-light" %>
+            <%= link_to 'MBA', subcourse_MBA_path, class: "btn btn-light" %>
+            <%= link_to 'Others', subcourses_path, class: "btn btn-light" %>
           </div>
         </li>
       </div>

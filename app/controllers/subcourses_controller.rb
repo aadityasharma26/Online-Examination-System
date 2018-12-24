@@ -37,6 +37,10 @@ class SubcoursesController < ApplicationController
     end
   end
 
+  def home
+    @subcourse = Subcourse.find(@subcourse)
+  end
+
   # PATCH/PUT /subcourses/1
   # PATCH/PUT /subcourses/1.json
   def update

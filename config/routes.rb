@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   get 'signup', to: 'user#new'
   resources :user, except: [:new]
   get 'examinee_home', to: 'home#examinee_home'
+  get 'sbucourse_page', to: 'home#subcourse_page'
+  get 'sbucourse_page2', to: 'home#subcourse_page2'
+  get 'subcourse_MBA', to: 'home#subcourse_MBA'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
