@@ -9,4 +9,7 @@ class HomeController < ApplicationController
   def examinee_home
 
   end
+  def questionsType_MBA
+
+  end
 end

@@ -12,9 +12,9 @@
   <tbody>
     <% @questions.each do |question| %>
       <tr>
-        <td><%= link_to 'Show', question %></td>
-        <td><%= link_to 'Edit', edit_question_path(question) %></td>
-        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', question, class: "btn btn-light" %></td>
+        <td><%= link_to 'Edit', edit_question_path(question), class: "btn btn-light" %></td>
+        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-light" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +22,4 @@
 
 <br>
 
-<%= link_to 'New Question', new_question_path %>
+<%= link_to 'New Question', new_question_path, class: 'btn btn-primary btn-lg' %>

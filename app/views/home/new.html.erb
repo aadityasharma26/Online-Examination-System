@@ -1,0 +1,48 @@
+<h1 align="center">Signup for Online Exam</h1>
+
+<% if @user.errors.any? %>
+<h1>The follofing errors prevented the examinee form getting created</h1>
+<ul>
+  <% @user.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul>
+<% end %>
+
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <li>
+          <label for="inputName4">User Name</label>
+          <input type="text" class="form-control" id="inputName4" placeholder="Name">
+        </li><br>
+        <li>
+          <label for="inputNumber4">Number</label>
+          <input type="number" class="form-control" id="inputNumber4" placeholder="+91">
+        </li><br>
+        <li>
+          <label for="inputEmail4">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        </li><br>
+        <li>
+          <label for="inputPassword4">Password</label>
+          <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+        </li>
+      </div>
+
+    </div>
+
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <label class="form-check-label" for="gridCheck">
+          Check me out
+        </label>
+      </div>
+    </div>
+  </form>
+  <br>
+<li>
+  <%= link_to 'Sign Up', new_examinee_path, class: "btn btn-primary btn-lg" %>
+  <%= link_to 'Back', examinees_path, class: "btn btn-primary btn-lg" %>
+</li>

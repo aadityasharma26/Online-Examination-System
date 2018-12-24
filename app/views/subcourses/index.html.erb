@@ -12,9 +12,9 @@
   <tbody>
     <% @subcourses.each do |subcourse| %>
       <tr>
-        <td><%= link_to 'Show', subcourse %></td>
-        <td><%= link_to 'Edit', edit_subcourse_path(subcourse) %></td>
-        <td><%= link_to 'Destroy', subcourse, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', subcourse, class: "btn btn-light" %></td>
+        <td><%= link_to 'Edit', edit_subcourse_path(subcourse), class: "btn btn-light" %></td>
+        <td><%= link_to 'Destroy', subcourse, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-light" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +22,4 @@
 
 <br>
 
-<%= link_to 'New Subcourse', new_subcourse_path %>
+<%= link_to 'New Subcourse', new_subcourse_path, class: 'btn btn-primary btn-lg' %>

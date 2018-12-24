@@ -24,9 +24,9 @@
         <td><%= examinee.password %></td>
         <td><%= examinee.password %></td>
         <td><%= examinee.address %></td>
-        <td><%= link_to 'Show', examinee %></td>
-        <td><%= link_to 'Edit', edit_examinee_path(examinee) %></td>
-        <td><%= link_to 'Destroy', examinee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', examinee, class: "btn btn-light" %></td>
+        <td><%= link_to 'Edit', edit_examinee_path(examinee), class: "btn btn-light" %></td>
+        <td><%= link_to 'Destroy', examinee, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-light" %></td>
       </tr>
     <% end %>
   </tbody>

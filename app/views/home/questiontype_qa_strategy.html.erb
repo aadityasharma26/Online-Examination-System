@@ -14,31 +14,14 @@
   <body>
     <div class="center jumbotron" >
       <h1>Select</h1>
-      <h1>MBA Course</h1>
+      <h1>Question Type</h1>
       <div class="btn btn-info">
         <li class="dropdown">
-          <a href="#",align="center" class="btn btn-primary btn-lg active">MARKETING</a>
+          <a href="#",align="center" class="btn btn-primary btn-lg active">Question type</a>
           <div class="dropdown_list">
-            <%= link_to 'Quantitative Aptitude', questionsType_MBA_path, class: "btn btn-light" %>
-            <%= link_to 'English Uses Test', questiontype_eng_marketing_path, class: "btn btn-light" %>
-          </div>
-        </li>
-      </div>
-      <div class="btn btn-info">
-        <li class="dropdown">
-          <a href="#",align="center" class="btn btn-primary btn-lg active">ENTREPRENEURSHIP</a>
-          <div class="dropdown_list">
-            <%= link_to 'Quantitative Aptitude', questiontype_qa_enterprenur_path, class: "btn btn-light" %>
-            <%= link_to 'English Uses Test', questiontype_eng_enterprenur_path, class: "btn btn-light" %>
-          </div>
-        </li>
-      </div>
-      <div class="btn btn-info">
-        <li class="dropdown">
-          <a href="#",align="center" class="btn btn-primary btn-lg active">STRATEGY</a>
-          <div class="dropdown_list">
-            <%= link_to 'Quantitative Aptitude', questiontype_qa_strategy_path, class: "btn btn-light" %>
-            <%= link_to 'English Uses Test', questiontype_eng_strategy_path, class: "btn btn-light" %>
+            <%= link_to 'LOW', low_qa_strategy_path, calss: "btn btn-light" %>
+            <%= link_to 'MEDIUM', medium_qa_strategy_path, calss: "btn btn-light" %>
+            <%= link_to 'HIGH', high_qa_strategy_path, calss: "btn btn-light" %>
           </div>
         </li>
       </div>
