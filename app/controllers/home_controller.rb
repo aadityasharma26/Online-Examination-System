@@ -12,4 +12,7 @@ class HomeController < ApplicationController
   def questionsType_MBA
 
   end
+  def medium_qa_strategy
+
+  end
 end

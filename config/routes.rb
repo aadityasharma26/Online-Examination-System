@@ -57,5 +57,7 @@ Rails.application.routes.draw do
   get 'medium_eng_marketing', to: 'home#medium_eng_marketing'
   get 'high_eng_marketing', to: 'home#high_eng_marketing'
 
+  get 'index', to: 'exam_question#index'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
