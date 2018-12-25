@@ -3,5 +3,5 @@ class Subcourse < ApplicationRecord
   has_many :exams
   has_many :subjects
   belongs_to :course
-  validates :subcourse
+  validates :subcourse, prnceese: true
 end
